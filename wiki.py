@@ -11,7 +11,7 @@ def wiki():
 		# words = ' '.join(words)
 		print('\n',"Please wait ...",end='\r')
 
-		data = wikipedia.summary(output, sentences = 3)
+		data = wikipedia.summary(output, sentences = 10)
 
 		print('About',output,':')
 		audio_recg.text2speech("here is something about"+output)
