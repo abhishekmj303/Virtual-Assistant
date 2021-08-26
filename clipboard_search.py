@@ -4,8 +4,19 @@ try:
 	data = pyperclip.paste().strip()
 	print('Your clipboard contains : ', data)
 	print()
-	if data[0]=='"' and data[-1]=='"':
-		data = data[1:-1]
+
+	try:
+		if (data[0]=='"' and data[-1]=='"') or (data[0]=="'" and data[-1]=="'"):
+			data = data[1:-1].strip()
+
+	except Exception as ex:
+		print('Nothing to do')
+		exit(input('Your clipboard is empty'))
+
+	if data == '':
+		print('Nothing to do')
+		exit(input('Your clipboard is empty'))
+
 	urls = ['https://', 'http://', 'ftp://']
 
 	if (data[:8] in urls) or (data[:7] in urls) or (data[:6] in urls):
@@ -16,11 +27,6 @@ try:
 		# data = '"'+data+'"'
 		print('Opening "'+data+'" ...  ')
 		os.startfile(os.path.realpath(data))
-
-	elif data == '':
-		print('This data type is not supported')
-		print('Please copy any "Text" or "Url"')
-		input()
 
 	else:
 		print('Searching Google for "'+data+'"')
