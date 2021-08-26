@@ -8,7 +8,7 @@ try:
 		data = data[1:-1]
 	urls = ['https://', 'http://', 'ftp://']
 
-	if (urls[0] or urls[1] or urls[2]) in data[:8]:
+	if (data[:8] in urls) or (data[:7] in urls) or (data[:6] in urls):
 		print('Opening', data, '...')
 		webbrowser.open_new_tab(data)
 
