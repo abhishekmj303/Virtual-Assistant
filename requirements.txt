@@ -1,5 +1,5 @@
 pyttsx3
-SpeachRecognition
+SpeechRecognition
 pyperclip
 pygetwindow
 wikipedia

@@ -11,14 +11,14 @@ These are some bunch of programs which made me more lazy:
 -  [Close Apps](close_apps.py)
 
 ## Install
-#### Install pip and Tkinter
+#### Install git, pip and Tkinter
 - For Debian/Ubuntu based:
   ~~~~
-  sudo apt-get install python3-venv python3-pip python-tk
+  sudo apt-get install git python3-venv python3-pip python-tk
   ~~~~
 - For Arch based:
   ~~~~
-  sudo pacman -S python-pip tk
+  sudo pacman -S git python-pip tk
   ~~~~
 #### Clone the repo
 ~~~~
