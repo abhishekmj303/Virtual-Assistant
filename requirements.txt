@@ -3,3 +3,6 @@ SpeachRecognition
 pyperclip
 pygetwindow
 wikipedia
+PySimpleGUI
+qrcode
+pyaudio

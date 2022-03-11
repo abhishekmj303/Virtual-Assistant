@@ -6,10 +6,20 @@ These are some bunch of programs which made me more lazy:
 -  [Voice Search](speach_search.py)
 -  [Search Wikipedia](wiki.py)
 -  [Search or Go-to Clipboard content](clipboard_search.py)
+-  [Generate QR Code from Clipboard](qr_generate.py)
 -  [Open Apps](open_apps.py)
 -  [Close Apps](close_apps.py)
 
 ## Install
+#### Install pip and Tkinter
+- For Debian/Ubuntu based:
+  ~~~~
+  sudo apt-get install python3-venv python3-pip python-tk
+  ~~~~
+- For Arch based:
+  ~~~~
+  sudo pacman -S python-pip tk
+  ~~~~
 #### Clone the repo
 ~~~~
 git clone https://github.com/abhishekmj303/Virtual-Assistant.git
@@ -20,6 +30,7 @@ git clone https://github.com/abhishekmj303/Virtual-Assistant.git
 cd Virtual-Assistant
 pip3 install -r requirements.txt
 ~~~~
+
 
 ## Usage
 Run required programs: `python3 <Program-Name>.py`
