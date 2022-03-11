@@ -1,0 +1,5 @@
+pyttsx3
+SpeachRecognition
+pyperclip
+pygetwindow
+wikipedia

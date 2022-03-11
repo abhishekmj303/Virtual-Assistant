@@ -1,4 +1,4 @@
-import pyperclip, webbrowser, urllib.parse, os
+import pyperclip, urllib.parse, subprocess
 
 try:
 	data = pyperclip.paste().strip()
@@ -18,20 +18,28 @@ try:
 		exit(input('Your clipboard is empty'))
 
 	urls = ['https://', 'http://', 'ftp://']
+	fileSystem = ['~/', '/bin', '/boot', '/cdrom', '/dev', '/etc', '/home', '/lib', '/lib32', '/lib64',
+		'/libx32', '/media', '/mnt', '/opt', '/proc', '/root', '/run', '/sbin', '/snap', '/srv',
+		'/sys', '/tmp', '/usr', '/var']
+	xdgOpen = False
 
-	if (data[:8] in urls) or (data[:7] in urls) or (data[:6] in urls):
-		print('Opening', data, '...')
-		webbrowser.open_new_tab(data)
+	for i in range(2,9):
+		if data[:i] in fileSystem:
+			xdgOpen = True
 
-	elif (data[1:3] or data[2:4]) == ':\\':
-		# data = '"'+data+'"'
-		print('Opening "'+data+'" ...  ')
-		os.startfile(os.path.realpath(data))
+		elif i>=6 and i<=8:
+			if data[:i] in urls:
+				xdgOpen = True
+
+	if xdgOpen==True:
+		print("Opening ", data, "...")
+		subprocess.run(["xdg-open", data])
 
 	else:
 		print('Searching Google for "'+data+'"')
 		url_parse = urllib.parse.quote_plus(data)
-		webbrowser.open_new_tab('https://google.com/search?q='+url_parse)
+		data = 'https://search.mj303.live/search?q='+url_parse
+		subprocess.Popen(['xdg-open', data])
 
 except Exception as ex:
 	print(ex)
