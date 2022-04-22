@@ -7,18 +7,19 @@ These are some bunch of programs which made me more lazy:
 -  [Search Wikipedia](wiki.py)
 -  [Search or Go-to Clipboard content](clipboard_search.py)
 -  [Generate QR Code from Clipboard](qr_generate.py)
+-  [Scan QR Code](qr_scan.py)
 -  [Open Apps](open_apps.py)
 -  [Close Apps](close_apps.py)
 
 ## Install
-#### Install git, pip and Tkinter
+#### Install essential softwares
 - For Debian/Ubuntu based:
   ~~~~
-  sudo apt-get install git python3-venv python3-pip python-tk
+  sudo apt install git xsel portaudio19-dev espeak-ng python3-venv python3-pip python3-tk
   ~~~~
 - For Arch based:
   ~~~~
-  sudo pacman -S git python-pip tk
+  sudo pacman -S git espeak-ng python-pip tk
   ~~~~
 #### Clone the repo
 ~~~~

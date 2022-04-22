@@ -1,7 +1,7 @@
 import audio_recg, pyautogui as bot, time
 
 def open(app):
-	bot.hotkey('alt','space')
+	bot.press('win')
 	time.sleep(1)
 	bot.write(app)
 	time.sleep(1)

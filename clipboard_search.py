@@ -39,7 +39,7 @@ try:
 		print('Searching Google for "'+data+'"')
 		url_parse = urllib.parse.quote_plus(data)
 		data = 'https://search.mj303.live/search?q='+url_parse
-		subprocess.Popen(['xdg-open', data])
+		subprocess.Popen(['brave', '--incognito', data])
 
 except Exception as ex:
 	print(ex)

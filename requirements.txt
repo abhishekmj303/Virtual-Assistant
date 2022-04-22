@@ -6,3 +6,5 @@ wikipedia
 PySimpleGUI
 qrcode
 pyaudio
+opencv-python
+pyautogui

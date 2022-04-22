@@ -3,7 +3,7 @@ import qrcode, pyperclip
 
 clpb = pyperclip.paste()
 img = qrcode.make(clpb)
-file = "./.cache/temp_qr.png"
+file = "./temp_qr.png"
 img.save(file)
 
 sg.theme('DarkAmber')
